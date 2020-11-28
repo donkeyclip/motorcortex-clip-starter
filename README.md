@@ -11,7 +11,7 @@ It includes:
 contains the `clip.js` file which is just a starting point for your Clip.
 * a "demo" folder which is there just for the needs of viewing, debugging and demonstrating 
 your Clip. The demo page includes a toolset that you can use in order to export your Clip
-as an embedable, portable script to use in other pages 
+as an embedable, portable script
 
 ## How to use
 Once you've created your new Clip you have the ability to export an embedable, portable
