@@ -17,7 +17,7 @@
     "lint:js": "eslint -c .eslintrc src/**/*.js",
     "lint": "npm run concurrently \"npm:lint:js\" \"npm:lint:styles\"",
     "lint:fix": "npm run concurrently  \"npm:lint:js -- --fix\" \"npm:lint:styles -- --fix\"",
-    "start": "webpack serve --mode=development --config ./webpack.config.js",
+    "start": "npm run build & webpack serve --mode=development --config ./webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
     "test:prod": "npm run lint"
   },
