@@ -1,8 +1,6 @@
 import MotorCortex from '@kissmybutton/motorcortex';
 
-import Player from "@kissmybutton/motorcortex-player";
-
-const clip = new MotorCortex.HTMLClip({
+export const clip = new MotorCortex.HTMLClip({
     html: `<div class="container"></div>`,
     css: `
         .container{
@@ -16,5 +14,3 @@ const clip = new MotorCortex.HTMLClip({
         height: '900px'
     }
 });
-
-const player = new Player({clip});

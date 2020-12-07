@@ -4,7 +4,7 @@ const webpack = require("webpack");
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./clip/clip.js",
+  entry: "./demo/motorcortex-tools.js",
 
   resolve: {
     extensions: [".js"],
