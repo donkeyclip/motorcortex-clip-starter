@@ -19,16 +19,17 @@ body {
 
 #motorcortex-tools{
     position: absolute;
-    width: 100%;
+    width: calc(100% - 40px);
     z-index: 999;
     left: 0;
     bottom: 0;
-    padding: 10px 0px;
+    padding: 10px 20px;
     font-family: Arial, Helvetica, sans-serif;
     transition: all 400ms;
     background: #282828;
     border-top: 1px solid #282828;
     transition-delay: 1000ms;
+    height: 30px;
 }
 
 #motorcortex-tools *{
@@ -40,7 +41,7 @@ body {
     display: inline-block;
     background: #282828;
     position:absolute;
-    padding: 0 0px 20px 16px;
+    padding: 0 0px 20px 35px;
     z-index: 3;
     margin-right: 10px;
     cursor: pointer;
@@ -53,6 +54,8 @@ body {
 #motorcortex-tools div#menu{
     display: inline-block;
     transform: translateX(-100%);
+    position: relative;
+    top: 6px;
 }
 #motorcortex-tools div.item{
     display: inline-block;
@@ -85,6 +88,6 @@ body {
 #motorcortex-tools:hover #motorcortex-logo{
     transform: scale(1);
     background: #323232;
-    top: 6px;
+    top: 13px;
     padding-bottom: 0px;
 }
