@@ -2,23 +2,19 @@ html,
 body {
     margin: 0;
     background-color: #282828;
+    position: relative;
+    min-height: calc(100vh - 30px);
 }
-section {
-    height: 100%;
+
+#projector {
     width: 100%;
-    position: absolute;
+    padding-bottom: 60px;
 }
+
 #clip {
     background-color: #f7f7f7;
     margin: auto;
     margin-top: 2%;
-    margin-bottom: 40px;
-}
-
-#tools-container{
-    position:relative;
-    margin-top: 40px;
-    height: 30px;
 }
 
 #motorcortex-tools{
@@ -29,9 +25,17 @@ section {
     bottom: 0;
     padding: 10px 0px;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all 300ms;
+    transition: all 400ms;
     background: #282828;
+    border-top: 1px solid #282828;
+    transition-delay: 1000ms;
 }
+
+#motorcortex-tools *{
+    transition: all 400ms;
+    transition-delay: 1000ms;
+}
+
 #motorcortex-tools div#motorcortex-logo{
     display: inline-block;
     background: #282828;
@@ -40,7 +44,6 @@ section {
     z-index: 3;
     margin-right: 10px;
     cursor: pointer;
-    transition: all 300ms;
     transform: scale(0.8);
     transform-origin: bottom center;
     top: -6px;
@@ -50,7 +53,6 @@ section {
 #motorcortex-tools div#menu{
     display: inline-block;
     transform: translateX(-100%);
-    transition: all 300ms;
 }
 #motorcortex-tools div.item{
     display: inline-block;
@@ -64,4 +66,25 @@ section {
 }
 #motorcortex-tools div.item a:hover{
     color: whitesmoke;
+}
+
+#motorcortex-tools:hover{
+    background: #323232;
+    border-color: #888;
+    transition-delay: 0ms;
+}
+
+#motorcortex-tools:hover *{
+    transition-delay: 0ms;
+}
+
+#motorcortex-tools:hover #menu{
+    transform: translateX(30%);
+}
+
+#motorcortex-tools:hover #motorcortex-logo{
+    transform: scale(1);
+    background: #323232;
+    top: 6px;
+    padding-bottom: 0px;
 }

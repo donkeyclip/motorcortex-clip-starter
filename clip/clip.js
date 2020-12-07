@@ -11,6 +11,6 @@ export const clip = new MotorCortex.HTMLClip({
     host: document.getElementById('clip'),
     containerParams: {
         width: '1200px',
-        height: '900px'
+        height: '675px'
     }
 });
