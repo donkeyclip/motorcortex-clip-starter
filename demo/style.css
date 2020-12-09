@@ -165,6 +165,9 @@ body {
 .material-icons-outlined.md-30{
     font-size: 35px;
 }
+.material-icons-outlined.md-16{
+    font-size: 16px;
+}
 
 #motorcortex-tools #name{
     color: #888;
@@ -183,13 +186,22 @@ body {
     color: #888;
 }
 
+#motorcortex-tools #menu div.item a span{
+    position: relative;
+    top:3px;
+}
 #motorcortex-tools #menu div.item{
     padding: 0 10px;
+}
+#motorcortex-tools #menu div.item:first-child{
+    padding-left: 20px;
 }
 #motorcortex-tools #menu div.item a{
     text-decoration: none;
     font-size: 16px;
     color: #888;
+    position: relative;
+    top: 0px;
 }
 #motorcortex-tools:hover div.item:hover, 
 #motorcortex-tools:hover #menu div.item a:hover, 
@@ -219,7 +231,7 @@ body {
 #motorcortex-tools:hover #motorcortex-logo{
     transform: scale(1);
     background: #323232;
-    top: 13px;
+    top: 10px;
     padding-bottom: 0px;
 }
 
