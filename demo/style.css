@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: #282828;
     position: relative;
-    min-height: calc(100vh - 38px);
+    min-height: calc(100vh - 40px);
 }
 
 #projector {
@@ -25,17 +25,22 @@ body {
     bottom: 0;
     padding: 10px 20px;
     font-family: Arial, Helvetica, sans-serif;
-    transition: all 300ms;
+    transition: all 300ms linear 2500ms, color 0ms linear 0ms;
     background: #282828;
-    border-top: 1px solid #282828;
-    transition-delay: 2500ms;
     height: 30px;
-    overflow: hidden;
+    overflow: visible;
+}
+
+#motorcortex-tools .border{
+    border-top: 1px solid #282828;
+    width:100%;
+    position: absolute;
+    bottom: 49px;
+    left: 0;
 }
 
 #motorcortex-tools *{
-    transition: all 300ms;
-    transition-delay: 2500ms;
+    transition: all 300ms linear 2500ms, color 0ms linear 0ms;
 }
 
 #motorcortex-tools div#motorcortex-logo{
@@ -43,7 +48,7 @@ body {
     background: #282828;
     position:absolute;
     padding: 0 0px 20px 35px;
-    z-index: 3;
+    z-index: 10;
     margin-right: 10px;
     cursor: pointer;
     transform: scale(0.8);
@@ -60,7 +65,6 @@ body {
 }
 
 #motorcortex-tools div#right-menu{
-    transform: translateX(100%);
     position: absolute;
     color: #888;
     right: 0px;
@@ -69,13 +73,69 @@ body {
     z-index: 9;
 }
 
+#motorcortex-tools div#right-menu{
+    opacity: 0;
+}
+#motorcortex-tools:hover div#right-menu{
+    opacity: 1;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu{
+    position: absolute;
+    z-index:-1;
+    padding-bottom: 60px;
+    bottom: 25px;
+    right: 25px;
+    padding: 15px;
+    font-size: 18px;
+    width: 250px;
+    background: #999;
+    display: none;
+    box-shadow: 0px 7px 12px -8px #000000;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item{
+    color: #323232;
+}
+
+#motorcortex-tools div#right-menu .item:hover .popup-menu{
+    display: block;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item{
+    padding: 8px 0;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item-title{
+    display: inline-block;
+    bottom: 6px;
+    font-size: 16px;
+    position: relative;
+    padding: 0 6px;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item:hover{
+    color: whitesmoke;
+}
+
+#motorcortex-tools div#right-menu .item:hover .popup-menu{
+    color: #888;
+}
+
 #motorcortex-tools #right-menu div.item{
-    padding-right: 20px;
+    padding-left: 20px;
     cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position:relative;
 }
 
 #motorcortex-tools #right-menu div.item#avatar.not-loggedin{
     color: #555;
+}
+
+#motorcortex-tools:hover #right-menu{
+    margin-right: 20px;
 }
 
 .material-icons-sharp.md-30{
@@ -97,8 +157,6 @@ body {
 #motorcortex-tools div.item, #motorcortex-tools div.item a{
     display: inline-block;
     color: #888;
-    transition-delay:0ms !important;
-    transition: all 0ms !important;
 }
 
 #motorcortex-tools #menu div.item{
@@ -109,14 +167,20 @@ body {
     font-size: 16px;
     color: #888;
 }
-#motorcortex-tools div.item:hover, #motorcortex-tools #menu div.item a:hover, #motorcortex-tools #right-menu div.item#avatar.not-loggedin:hover{
+#motorcortex-tools:hover div.item:hover, 
+#motorcortex-tools:hover #menu div.item a:hover, 
+#motorcortex-tools:hover #right-menu div.item#avatar.not-loggedin:hover,
+#motorcortex-tools:hover #right-menu div.item:hover{
     color: whitesmoke;
 }
 
 #motorcortex-tools:hover{
     background: #323232;
-    border-color: #888;
     transition-delay: 0ms;
+}
+
+#motorcortex-tools:hover .border{
+    border-color: #888;
 }
 
 #motorcortex-tools:hover *{

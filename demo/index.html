@@ -13,8 +13,9 @@
     <div id="projector">
         <div id="clip"></div>
     </div>
-
+    
     <div id="motorcortex-tools">
+        <div class="border"></div>
         <div id="motorcortex-logo">
             <img src="./images/motorcortex.png" width="20px" height="20px" />
         </div>
@@ -27,7 +28,23 @@
             </div>
         </div>
         <div id="right-menu">
-            <div class="item" id="dev-tools"><span class="material-icons-sharp md-30">build_circle</span></div>
+            <div class="item" id="dev-tools">
+                <div class="popup-menu">
+                    <div class="pm-item">
+                        <span class="pm-item-icon material-icons-sharp md-28">code</span>
+                        <span class="pm-item-title">set init params</span>
+                    </div>
+                    <div class="pm-item">
+                        <span class="pm-item-icon material-icons-sharp md-28">share</span>
+                        <span class="pm-item-title">export</span>
+                    </div>
+                    <div class="pm-item">
+                        <span class="pm-item-icon material-icons-sharp md-28">open_in_new</span>
+                        <span class="pm-item-title">open on DonkeyClip</span>
+                    </div>
+                </div>
+                <span class="material-icons-sharp md-30">build_circle</span>
+            </div>
             <div class="item not-loggedin" id="avatar"><span class="material-icons-sharp md-30">account_box</span></div>
         </div>
         <div id="name">@kissmybutton/motorcortex</div>
