@@ -132,6 +132,9 @@ body {
 #motorcortex-tools div#right-menu .item:hover .arrow{
     display: block;
 }
+#motorcortex-tools.not-loggedin div#right-menu .item:hover .arrow.depends-on-login{
+    display:none;
+}
 
 #motorcortex-tools div#right-menu .item .popup-menu .pm-item{
     color: #888;
@@ -139,6 +142,9 @@ body {
 
 #motorcortex-tools div#right-menu .item:hover .popup-menu{
     display: block;
+}
+#motorcortex-tools.not-loggedin div#right-menu .item:hover .popup-menu.depends-on-login{
+    display: none;
 }
 
 #motorcortex-tools div#right-menu .item .popup-menu .pm-item{
