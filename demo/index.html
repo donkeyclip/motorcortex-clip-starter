@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kyssmybutton | MotorCortex Plugin Starter Demo</title>
+    <title>Kyssmybutton | MotorCortex Clip Starter</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
@@ -30,17 +30,28 @@
         <div id="right-menu">
             <div class="item" id="dev-tools">
                 <div class="popup-menu">
-                    <div class="pm-item">
-                        <span class="pm-item-icon material-icons-outlined md-28">code</span>
-                        <span class="pm-item-title">set init params</span>
-                    </div>
-                    <div class="pm-item">
+                    <div class="pm-item depends-on-login">
                         <span class="pm-item-icon material-icons-outlined md-28">cloud_upload</span>
                         <span class="pm-item-title">export</span>
+                        <div class="details">
+                            You need to login to enable this feature. Lean more about exporting <a href="#">here</a>
+                        </div>
                     </div>
-                    <div class="pm-item">
+                    <div class="pm-item depends-on-login">
                         <span class="pm-item-icon material-icons-outlined md-28">open_in_new</span>
                         <span class="pm-item-title">open on DonkeyClip</span>
+                        <div class="details">
+                            You need to login to enable this feature. Lean more about exporting <a href="#">here</a>
+                        </div>
+                    </div>
+                    <div class="pm-item" id="set-init-params">
+                        <div>
+                            <span class="pm-item-icon material-icons-outlined md-28">code</span>
+                            <span class="pm-item-title">set init params</span>
+                        </div>
+                        <div class="details">
+                            Here goes the explanation why this is disabled and what to do in order to enable it. And here is a <a href="#">link</a>
+                        </div>
                     </div>
                 </div>
                 <div class="arrow">
@@ -48,7 +59,7 @@
                 </div>
                 <span class="material-icons-outlined md-30">handyman</span>
             </div>
-            <div class="item not-loggedin" id="avatar">
+            <div class="item" id="avatar">
                 <div class="popup-menu">
                     <div class="pm-item">
                         <span class="pm-item-icon material-icons-outlined md-28">account_box</span>

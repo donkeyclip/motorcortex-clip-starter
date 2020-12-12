@@ -14,3 +14,9 @@ export const clip = new MotorCortex.HTMLClip({
         height: '675px'
     }
 });
+
+export const initParamsMap = {
+    width: [
+        `${clip.id}.initParams.x`
+    ]
+}

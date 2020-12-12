@@ -79,7 +79,16 @@ body {
 #motorcortex-tools:hover div#right-menu{
     opacity: 1;
 }
-
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item.disabled,
+#motorcortex-tools.not-loggedin div#right-menu .item .popup-menu .pm-item.depends-on-login{
+    color: #555;
+    cursor: default;
+}
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item.disabled:hover,
+#motorcortex-tools.not-loggedin div#right-menu .item .popup-menu .pm-item.depends-on-login:hover{
+    background: #444;
+    color: black;
+}
 #motorcortex-tools div#right-menu .item .popup-menu{
     position: absolute;
     z-index:11;
@@ -91,6 +100,17 @@ body {
     background: #323232;
     display: none;
     border-radius: 6px;
+}
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item .details,
+#motorcortex-tools.not-loggedin div#right-menu .item .popup-menu .pm-item.depends-on-login .details{
+    font-size: 14px;
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0;
+}
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item.disabled:hover .details,
+#motorcortex-tools.not-loggedin div#right-menu .item .popup-menu .pm-item.depends-on-login:hover .details{
+    max-height: 48px;
 }
 
 .arrow{
@@ -154,7 +174,7 @@ body {
 }
 
 
-#motorcortex-tools #right-menu div.item#avatar.not-loggedin{
+#motorcortex-tools.not-loggedin #right-menu div.item#avatar{
     color: #555;
 }
 
@@ -205,7 +225,7 @@ body {
 }
 #motorcortex-tools:hover div.item:hover, 
 #motorcortex-tools:hover #menu div.item a:hover, 
-#motorcortex-tools:hover #right-menu div.item#avatar.not-loggedin:hover,
+#motorcortex-tools.not-loggedin:hover #right-menu div.item#avatar:hover,
 #motorcortex-tools:hover #right-menu div.item:hover{
     color: whitesmoke;
 }

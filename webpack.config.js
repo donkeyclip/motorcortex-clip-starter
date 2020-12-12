@@ -79,5 +79,5 @@ module.exports = {
   },
 
   /* uncomment the following line for debugging */
-//   optimization: {minimize: false}
+  optimization: {minimize: false}
 };
