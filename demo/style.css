@@ -129,7 +129,8 @@ body {
     border-top: 22px solid #323232;
 }
 
-#motorcortex-tools div#right-menu .item:hover .arrow{
+#motorcortex-tools div#right-menu .item:hover .arrow,
+#motorcortex-tools.not-loggedin div#right-menu .item:hover .arrow.depends-on-login.needs-not-loggedin{
     display: block;
 }
 #motorcortex-tools.not-loggedin div#right-menu .item:hover .arrow.depends-on-login{
@@ -140,9 +141,11 @@ body {
     color: #888;
 }
 
-#motorcortex-tools div#right-menu .item:hover .popup-menu{
+#motorcortex-tools div#right-menu .item:hover .popup-menu,
+#motorcortex-tools.not-loggedin div#right-menu .item:hover .popup-menu.depends-on-login.needs-not-loggedin{
     display: block;
 }
+#motorcortex-tools div#right-menu .item:hover .popup-menu.depends-on-login.needs-not-loggedin,
 #motorcortex-tools.not-loggedin div#right-menu .item:hover .popup-menu.depends-on-login{
     display: none;
 }
