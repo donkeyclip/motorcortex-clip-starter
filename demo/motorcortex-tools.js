@@ -1,7 +1,7 @@
 import {clip, initParamsMap} from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
 
-const isLoggedIn = false;
+const isLoggedIn = true;
 
 const clipContainer = document.getElementById('clip');
 const toolset = document.getElementById('motorcortex-tools');

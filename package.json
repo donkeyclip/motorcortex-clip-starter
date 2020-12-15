@@ -30,7 +30,8 @@
     }
   },
   "dependencies": {
-    "@kissmybutton/motorcortex": "6.1.0"
+    "@kissmybutton/motorcortex": "6.1.0",
+    "codejar": "3.2.3"
   },
   "devDependencies": {
     "@babel/cli": "7.12.10",
