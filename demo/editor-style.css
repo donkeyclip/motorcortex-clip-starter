@@ -1,0 +1,76 @@
+.codeflask {
+  font-size: 13px;
+  line-height: 20px;
+  /* background: #1d1f21; */
+  color: #61afef;
+}
+
+.codeflask .token.punctuation {
+      color: #e69bff;
+    font-weight: 900;
+}
+
+.codeflask .token.keyword {
+  color: #c397d8;
+}
+
+.codeflask .token.operator {
+  color: #c397d8;
+}
+
+.codeflask .token.parameter {
+  color: #e78c45;
+}
+
+.codeflask .token.string {
+  color: white;
+}
+
+.codeflask .token.comment {
+  color: #74715e;
+  font-style: italic;
+}
+
+.codeflask .token.function {
+  color: #b9ca4a;
+}
+
+.codeflask .token.boolean {
+  color: orange;
+}
+
+.codeflask .token.number {
+    color: #FFEB3B;
+    /* font-weight: 600; */
+}
+
+.codeflask .token.selector {
+  color: #b294bb;
+}
+
+.codeflask .token.property {
+  color: #b294bb;
+}
+
+.codeflask .token.tag {
+  color: #b294bb;
+}
+
+.codeflask .token.attr-value {
+  color: #b294bb;
+}
+
+.codeflask__textarea{
+  caret-color: whitesmoke !important;
+  color: #1d1f21 !important;
+}
+
+.codeflask__lines{
+    background: rgba(0,0,0,0.1);
+    padding-right: 10px !important;
+    color: #aaa;
+}
+
+.codeflask.codeflask--has-line-numbers:before{
+    background: transparent !important;
+}
