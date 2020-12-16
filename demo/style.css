@@ -33,7 +33,7 @@ body {
 
 #motorcortex-tools #json-editor{
     position: fixed;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 250px);
     width: calc(50vw);
     top: 80px;
     left: 25vw;
@@ -42,12 +42,17 @@ body {
     border: 1px solid #888;
     padding: 15px;
     color: #888;
+    display:none;
+}
+
+#motorcortex-tools #json-editor.open{
+    display: block;
 }
 
 #motorcortex-tools #json-editor .title{
     height: 30px;
     width: 100%;
-    color: #999;
+    color: #aaa;
 }
 
 #motorcortex-tools #json-editor .editor{
@@ -143,7 +148,7 @@ body {
     position: absolute;
     z-index:11;
     bottom: 63px;
-    right: 16px;
+    right: 4px;
     padding: 10px;
     font-size: 16px;
     width: 250px;
@@ -164,7 +169,7 @@ body {
 }
 
 .arrow{
-    right: 16px;
+    right: 4px;
     top: -20px;
     position: absolute;
     display:none;
@@ -174,8 +179,8 @@ body {
 .actual-arrow{
     width: 0px;
     height: 0px;
-    border-left: 24px solid transparent;
-    border-right: 0px solid transparent;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
     border-top: 22px solid #323232;
 }
 

@@ -5,6 +5,10 @@
   color: #61afef;
 }
 
+.codeflask > pre{
+    transition: all 0ms !important;
+}
+
 .codeflask .token.punctuation {
       color: #e69bff;
     font-weight: 900;
