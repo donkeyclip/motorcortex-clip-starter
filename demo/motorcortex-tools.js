@@ -45,7 +45,15 @@ if(!initParamsMap){
         lineNumbers: false,
         defaultTheme: false
     });
+    const jsonTextArea = document.querySelector('textarea');
+    jsonTextArea.addEventListener('keydown', event => {
+        console.log('x');
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        editor.classList.toggle('open');
+    });
 }
+
 
 /*********** HOTKEYS SETUP ************/
 import hotkeys from 'hotkeys-js';
@@ -66,8 +74,6 @@ if (window.navigator.userAgent.indexOf("Mac") != -1){
     });
 } else {
     hotkeys('ctrl+i,ctrl+s', function (event, handler){
-
-
         event.preventDefault();
         switch (handler.key) {
             case 'ctrl+s': 
