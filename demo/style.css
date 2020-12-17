@@ -210,6 +210,15 @@ body {
 
 #motorcortex-tools div#right-menu .item .popup-menu .pm-item{
     color: #888;
+    position: relative;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item .shortkeys{
+    position: absolute;
+    right: 12px;
+    top: 15px;
+    font-size: 11px;
+    color: #323232;
 }
 
 #motorcortex-tools div#right-menu .item:hover .popup-menu,
@@ -235,6 +244,10 @@ body {
 
 #motorcortex-tools div#right-menu .item .popup-menu .pm-item:hover{
     background: #777;
+    color: black;
+}
+
+#motorcortex-tools div#right-menu .item .popup-menu .pm-item:hover .shortkeys{
     color: black;
 }
 
