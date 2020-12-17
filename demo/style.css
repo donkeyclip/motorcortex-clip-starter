@@ -31,6 +31,14 @@ body {
     overflow: visible;
 }
 
+#motorcortex-tools.mac .os-hotkey::before {
+  content: "⌘";
+}
+
+#motorcortex-tools .os-hotkey::before {
+  content: "ctrl";
+}
+
 #motorcortex-tools #json-editor{
     position: fixed;
     height: calc(100vh - 250px);
@@ -43,6 +51,7 @@ body {
     padding: 15px;
     color: #888;
     display:none;
+    border-radius: 15px;
 }
 
 #motorcortex-tools #json-editor.open{

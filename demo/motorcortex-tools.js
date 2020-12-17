@@ -47,3 +47,35 @@ if(!initParamsMap){
     });
 }
 
+/*********** HOTKEYS SETUP ************/
+import hotkeys from 'hotkeys-js';
+
+if (window.navigator.userAgent.indexOf("Mac") != -1){
+    toolset.classList.add('mac');
+
+    hotkeys('command+i,command+s', function (event, handler){
+        event.preventDefault();
+        switch (handler.key) {
+            case 'command+s': 
+                editor.classList.toggle('open');
+                break;
+            case 'command+i': 
+                editor.classList.toggle('open');
+                break;
+        }
+    });
+} else {
+    hotkeys('ctrl+i,ctrl+s', function (event, handler){
+
+
+        event.preventDefault();
+        switch (handler.key) {
+            case 'ctrl+s': 
+                alert('s');
+                break;
+            case 'ctrl+i': 
+                alert('i');
+                break;
+        }
+    });
+}
