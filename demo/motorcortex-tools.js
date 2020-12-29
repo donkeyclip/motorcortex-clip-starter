@@ -3,7 +3,7 @@ import Player from "@kissmybutton/motorcortex-player";
 
 import CodeFlask from 'codeflask';
 
-const isLoggedIn = true;
+const isLoggedIn = false;
 
 const clipContainer = document.getElementById('clip');
 const toolset = document.getElementById('motorcortex-tools');
