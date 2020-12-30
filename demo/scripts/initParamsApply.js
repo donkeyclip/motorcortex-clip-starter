@@ -50,6 +50,5 @@ export default function initParamsApply(liveDefinition, clipId, paramsMap, param
         }
     }
 
-    console.log(liveDefinition);
     return liveDefinition;
 }

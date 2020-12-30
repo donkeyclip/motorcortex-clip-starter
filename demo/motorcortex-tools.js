@@ -1,6 +1,7 @@
 import {clip, initParamsMap} from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
 import initParamsApply from './scripts/initParamsApply';
+import {utils} from '@kissmybutton/motorcortex';
 
 import CodeFlask from 'codeflask';
 
@@ -25,7 +26,11 @@ function toggleInitParams(save = false, code=""){
         editorTextArea.focus();
     }
     if(save){
-        initParamsApply(clip.exportLiveDefinition(), clip.id, initParamsMap, JSON.parse(code));
+        const newLiveDef = initParamsApply(clip.exportLiveDefinition(), clip.id, initParamsMap, JSON.parse(code));
+        clipContainer.innerHTML = "";
+        newLiveDef.props.host = clipContainer;
+        clip = utils.clipFromDefinition(newLiveDef);
+        new Player({clip});
     }
 }
 
@@ -43,7 +48,7 @@ saveParams.addEventListener('click', event => {
 clipContainer.style.width = clip.props.containerParams.width;
 clipContainer.style.height = clip.props.containerParams.height;
 
-const player = new Player({clip});
+new Player({clip});
 
 if(!isLoggedIn){
     toolset.classList.add('not-loggedin');
