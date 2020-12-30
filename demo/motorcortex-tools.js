@@ -1,5 +1,6 @@
 import {clip, initParamsMap} from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
+import initParamsApply from './scripts/initParamsApply';
 
 import CodeFlask from 'codeflask';
 
@@ -13,7 +14,7 @@ const saveParams = document.getElementById('save-init-params');
 const initParamsSetButton = document.getElementById('set-init-params');
 
 let initParamsOpen = false;
-function toggleInitParams(save = false){
+function toggleInitParams(save = false, code=""){
     if(initParamsSetButton.classList.contains('disabled')){
         return ;
     }
@@ -22,6 +23,9 @@ function toggleInitParams(save = false){
     if(initParamsOpen){
         const editorTextArea = document.querySelector('.codeflask__textarea');
         editorTextArea.focus();
+    }
+    if(save){
+        initParamsApply(clip.exportLiveDefinition(), clip.id, initParamsMap, JSON.parse(code));
     }
 }
 
@@ -62,7 +66,7 @@ if(!initParamsMap){
             return;
         }        
         if(event.key === "s" && (event.ctrlKey || event.metaKey)){
-            toggleInitParams(true);
+            toggleInitParams(true, flask.getCode());
             event.preventDefault();
             event.stopImmediatePropagation();
             return ;
