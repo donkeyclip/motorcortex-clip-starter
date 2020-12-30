@@ -6,6 +6,10 @@ body {
     min-height: calc(100vh - 40px);
 }
 
+.hdn{
+    display:none;
+}
+
 #projector {
     width: 100%;
     padding-bottom: 60px;
@@ -70,6 +74,19 @@ body {
     position: relative;
     margin-bottom: 20px;
     left: -10px;
+}
+
+#motorcortex-tools #json-editor .error-container {
+    position: absolute;
+    bottom: 57px;
+    background: rgba(255,255,255,0.05);
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #FF8888;
+    border-top: 1px #FF8888 solid;
+    border-bottom: 1px #FF8888 solid;
+    left: 0;
 }
 
 #motorcortex-tools #json-editor .buttons{

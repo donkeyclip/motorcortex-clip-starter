@@ -4,7 +4,7 @@ const webpack = require("webpack");
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./motorcortex-tools.js",
+  entry: "./index.js",
 
   resolve: {
     extensions: [".js"],
@@ -69,7 +69,8 @@ module.exports = {
     historyApiFallback: false,
     hot: true,
     contentBase: "./demo",
-    open: true
+    open: true,
+    openPage: "https://kissmybutton.gr"
   },
   resolve: {
     fallback: {
