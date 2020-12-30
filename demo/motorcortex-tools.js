@@ -7,7 +7,7 @@ import CodeFlask from 'codeflask';
 
 const isLoggedIn = false;
 
-const clipContainer = document.getElementById('clip');
+let clipContainer = document.getElementById('clip');
 const toolset = document.getElementById('motorcortex-tools');
 const editor = document.getElementById('json-editor');
 const closeEditor = document.getElementById('cancel-init-params');
@@ -26,8 +26,14 @@ function toggleInitParams(save = false, code=""){
         editorTextArea.focus();
     }
     if(save){
-        const newLiveDef = initParamsApply(clip.exportLiveDefinition(), clip.id, initParamsMap, JSON.parse(code));
-        clipContainer.innerHTML = "";
+        let liveDef = clip.exportLiveDefinition();
+        liveDef.props.id = clip.id;
+        const newLiveDef = initParamsApply(liveDef, initParamsMap, JSON.parse(code));
+        document.getElementById("projector").innerHTML = "<div id='clip'></div>";
+        clipContainer = document.getElementById('clip');
+        // set clip container's dimensions
+        clipContainer.style.width = clip.props.containerParams.width;
+        clipContainer.style.height = clip.props.containerParams.height;
         newLiveDef.props.host = clipContainer;
         clip = utils.clipFromDefinition(newLiveDef);
         new Player({clip});

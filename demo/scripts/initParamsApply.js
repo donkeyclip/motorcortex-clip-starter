@@ -4,11 +4,10 @@ import {addToObject, getFromObject} from './pathHandler';
  * 
  * @param {object} liveDefinition - the exported live definition of the Clip
  * @param {object} paramsMap - the params map as defined by the developer
- * @param {string} clipId - the id of the Clip
  * @param {object} params - the params passed by the user
  * @returns {object} - the new live definition to be used for constructing the new Clip
  */
-export default function initParamsApply(liveDefinition, clipId, paramsMap, params){
+export default function initParamsApply(liveDefinition, paramsMap, params){
     /* initially we are going to create a collection with all the incidents along with their attrs and props
     references, such as follows:
     {
@@ -18,11 +17,7 @@ export default function initParamsApply(liveDefinition, clipId, paramsMap, param
     */
    const incidents = {};
    function addIncident(incident, id=null){
-       let idToUse = id;
-       if(idToUse === null){
-           idToUse = incident.props.id;
-       }
-       incidents[idToUse] = {
+       incidents[incident.props.id] = {
            attrs: incident.attrs,
            props: incident.props
        }
@@ -33,7 +28,7 @@ export default function initParamsApply(liveDefinition, clipId, paramsMap, param
            }
        }
    }
-   addIncident(liveDefinition, clipId);
+   addIncident(liveDefinition);
 
     // then we are going to iterate to the passed params and we are going to substitue the original values 
     // with the passed ones
