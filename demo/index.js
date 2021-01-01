@@ -1,9 +1,9 @@
 import {clip, initParamsMap} from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
 
-window.parent.postMessage({
+window.top.postMessage({
     what: 'clipLoaded',
-    clipDims: clip.containerParams,
+    clipDims: clip.props.containerParams,
     initParamsMap
 }, "*");
 
