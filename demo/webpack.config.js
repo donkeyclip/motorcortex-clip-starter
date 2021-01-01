@@ -70,7 +70,7 @@ module.exports = {
     hot: true,
     contentBase: "./demo",
     open: true,
-    openPage: "https://kissmybutton.gr"
+    openPage: "http://127.0.0.1:8081/"
   },
   resolve: {
     fallback: {
