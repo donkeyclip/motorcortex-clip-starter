@@ -25,16 +25,12 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        test: /\.css$/i,
+        use: ["css-loader"],
       },
       {
         test: /\.scss$/,
         use: [
-          {
-            loader: "style-loader",
-            options: { sourceMap: true }, // creates style nodes from JS strings
-          },
           {
             loader: "css-loader",
             options: { sourceMap: true }, // translates CSS into CommonJS

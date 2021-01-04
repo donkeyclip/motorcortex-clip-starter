@@ -1,4 +1,5 @@
 import MotorCortex from '@kissmybutton/motorcortex';
+import clipStyle from './style.scss';
 
 export const clip = new MotorCortex.HTMLClip({
     html: `<div class="container">
@@ -6,13 +7,7 @@ export const clip = new MotorCortex.HTMLClip({
         <br/>
         <%= initParams.y %>
     </div>`,
-    css: `
-        .container{
-            width: 100%;
-            height: 100%;
-            color: <%= initParams.color %>;
-        }
-    `,
+    css: clipStyle.toString(),
     host: document.getElementById('clip'),
     containerParams: {
         width: '1200px',
