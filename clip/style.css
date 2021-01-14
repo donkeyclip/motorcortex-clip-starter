@@ -1,0 +1,8 @@
+.container{
+    width: 100%;
+    height: 100%;
+    color: <%= initParams.color %>;
+    padding: 60px 0;
+    text-align: center;
+    font-size: 26px;
+}

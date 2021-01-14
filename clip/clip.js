@@ -1,29 +1,24 @@
 import MotorCortex from '@kissmybutton/motorcortex';
-import clipStyle from './style.scss';
+import clipStyle from './style.css';
 
 export const clip = new MotorCortex.HTMLClip({
     html: `<div class="container">
-        <%= initParams.x %>
-        <br/>
-        <%= initParams.y %>
+        Welcome!
+        <br/><br/>
+        You've picked <u><%= initParams.color %></u>
     </div>`,
     css: clipStyle.toString(),
     host: document.getElementById('clip'),
     containerParams: {
-        width: '1200px',
+        width: '800px',
         height: '675px'
     },
     initParams: {
-        x: 12,
-        y: 13,
-        color: "white"
+        color: "white" // eventhough we expect color's value on our initParams, still "white" will act as the default
     }
 });
 
 export const initParamsMap = {
-    x: [
-        `${clip.id}.props.initParams.x`
-    ],
     color: [
         `${clip.id}.props.initParams.color`
     ]
