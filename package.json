@@ -30,9 +30,7 @@
     }
   },
   "dependencies": {
-    "@kissmybutton/motorcortex": "6.1.0",
-    "codeflask": "1.4.1",
-    "hotkeys-js": "3.8.1"
+    "@kissmybutton/motorcortex": "6.1.0"
   },
   "devDependencies": {
     "@babel/cli": "7.12.10",
