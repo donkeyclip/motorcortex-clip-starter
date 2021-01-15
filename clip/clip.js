@@ -19,7 +19,5 @@ export const clip = new MotorCortex.HTMLClip({
 });
 
 export const initParamsMap = {
-    color: [
-        `${clip.id}.props.initParams.color`
-    ]
+    color: [`${clip.id}.props.initParams.color`]
 }

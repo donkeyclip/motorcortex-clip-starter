@@ -61,12 +61,17 @@ module.exports = {
   devServer: {
     // watchContentBase: true, // initiate a page refresh if static content changes
     host: "127.0.0.1",
-    port: 8080,
+    port: 8090,
     historyApiFallback: false,
     hot: true,
     contentBase: "./demo",
     open: true,
-    openPage: "http://127.0.0.1:8081/"
+    openPage: "http://code.donkeyclip.com",
+    headers: {
+      "Access-Control-Allow-Origin": 'http://code.donkeyclip.com:8081',
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    }
   },
   resolve: {
     fallback: {

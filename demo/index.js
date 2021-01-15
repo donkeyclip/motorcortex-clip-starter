@@ -21,8 +21,8 @@ window.addEventListener('message', (event)=>{
         clipContainer.style.width = clip.props.containerParams.width;
         clipContainer.style.height = clip.props.containerParams.height;
         newLiveDef.props.host = clipContainer;
-        clip = utils.clipFromDefinition(newLiveDef);
-        new Player({clip});
+        const newclip = utils.clipFromDefinition(newLiveDef);
+        new Player({clip: newclip});
     }
 });
 
