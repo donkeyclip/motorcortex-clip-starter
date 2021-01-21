@@ -30,7 +30,7 @@
     }
   },
   "dependencies": {
-    "@kissmybutton/motorcortex": "6.1.3"
+    "@kissmybutton/motorcortex": "6.1.4"
   },
   "devDependencies": {
     "@babel/cli": "7.12.10",
