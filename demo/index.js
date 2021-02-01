@@ -6,10 +6,12 @@ import {utils} from '@kissmybutton/motorcortex';
 const liveDef = clip.exportLiveDefinition();
 liveDef.props.id = clip.id;
 
+const clipDef = clip.exportDefinition();
 window.top.postMessage({
     what: 'clipLoaded',
     clipDims: clip.props.containerParams,
-    initParamsMap
+    initParamsMap,
+    clipDef: JSON.parse(JSON.stringify(clipDef))
 }, "*");
 
 window.addEventListener('message', (event)=>{
