@@ -68,7 +68,7 @@ module.exports = {
     open: true,
     openPage: "http://code.donkeyclip.com",
     headers: {
-      "Access-Control-Allow-Origin": 'https://8081-f388883a-e5d3-4d1a-9f1a-9baa41c0ad44.ws-eu03.gitpod.io/',
+      "Access-Control-Allow-Origin": 'http://code.donkeyclip.com:8081',
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     }
