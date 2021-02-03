@@ -33,11 +33,11 @@
     "@kissmybutton/motorcortex": "6.1.4"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.10",
-    "@babel/core": "7.12.10",
-    "@babel/plugin-syntax-jsx": "7.12.1",
-    "@babel/plugin-transform-react-jsx": "7.12.12",
-    "@babel/preset-env": "7.12.11",
+    "@babel/cli": "7.12.13",
+    "@babel/core": "7.12.13",
+    "@babel/plugin-syntax-jsx": "7.12.13",
+    "@babel/plugin-transform-react-jsx": "7.12.13",
+    "@babel/preset-env": "7.12.13",
     "@kissmybutton/motorcortex-player": "1.7.7",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.2.2",
