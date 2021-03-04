@@ -2,6 +2,7 @@ import {clip, initParamsMap} from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
 import initParamsApply from './scripts/initParamsApply';
 import {utils} from '@kissmybutton/motorcortex';
+import clipId from '../clip/id';
 
 const liveDef = clip.exportLiveDefinition();
 liveDef.props.id = clip.id;
@@ -11,7 +12,8 @@ window.top.postMessage({
     what: 'clipLoaded',
     clipDims: clip.props.containerParams,
     initParamsMap,
-    clipDef: JSON.parse(JSON.stringify(clipDef))
+    clipDef: JSON.parse(JSON.stringify(clipDef)),
+    clipId
 }, "*");
 
 window.addEventListener('message', (event)=>{
