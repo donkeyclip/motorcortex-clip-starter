@@ -21,7 +21,7 @@ jobs:
         path: "package.json"
         prop_path: "name"
     # Prep release mr
-      - uses: GoogleCloudPlatform/release-please-action@v1.3.0
+      - uses: GoogleCloudPlatform/release-please-action@v1.6.3
         id: release
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
