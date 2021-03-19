@@ -11,7 +11,7 @@ export const clip = new MotorCortex.HTMLClip({
   host: document.getElementById("clip"),
   containerParams: {
     width: "800px",
-    height: "200px",
+    height: "450px",
   },
   initParams: {
     color: "white", // eventhough we expect color's value on our initParams, still "white" will act as the default
