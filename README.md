@@ -22,5 +22,6 @@ In order to do so you need to login from the demo page.
 ## Commands
 * `npm run build`: builds the demo
 * `npm start`: builds and starts the demo
+* `npm render`: render the demo to mp4 video see [dclip-video-renderer](https://github.com/kissmybutton/dclip-video-renderer) from more
 
 ## Have fun!!!

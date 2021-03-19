@@ -68,18 +68,19 @@ module.exports = {
     open: true,
     openPage: "http://code.donkeyclip.com",
     headers: {
-      "Access-Control-Allow-Origin": 'http://code.donkeyclip.com:8081',
+      "Access-Control-Allow-Origin": "https://code.donkeyclip.com",
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
-    }
+      "Access-Control-Allow-Headers":
+        "X-Requested-With, content-type, Authorization",
+    },
   },
   resolve: {
     fallback: {
-        fs: false,
-        path: false
+      fs: false,
+      path: false,
     },
   },
 
   /* uncomment the following line for debugging */
-  optimization: {minimize: false}
+  optimization: { minimize: false },
 };
