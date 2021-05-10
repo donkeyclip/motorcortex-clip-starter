@@ -60,7 +60,7 @@
     "imports-loader": "2.0.0",
     "npm": "7.12.0",
     "npx": "10.2.2",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "rimraf": "3.0.2",
     "sass": "1.32.12",
     "sass-loader": "11.0.1",
