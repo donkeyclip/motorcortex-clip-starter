@@ -42,7 +42,7 @@
     "@kissmybutton/motorcortex-player": "1.9.4",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.2.2",
-    "concurrently": "6.1.0",
+    "concurrently": "6.2.0",
     "css-loader": "5.2.5",
     "dclip-video-renderer": "1.3.0",
     "es6-promise": "4.2.8",
