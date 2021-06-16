@@ -9,6 +9,10 @@ module.exports = {
   resolve: {
     extensions: [".js"],
     modules: [path.resolve("./"), "node_modules"],
+    fallback: {
+      fs: false,
+      path: false,
+    },
   },
   output: {
     filename: "./bundle.js",
@@ -72,12 +76,6 @@ module.exports = {
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization",
-    },
-  },
-  resolve: {
-    fallback: {
-      fs: false,
-      path: false,
     },
   },
 
