@@ -27,6 +27,6 @@ export const clip = new MotorCortex.HTMLClip({
     }
   },
   initParams: {
-    color: "white", // eventhough we expect color's value on our initParams, still "white" will act as the default
+    color: "white"
   },
 });
