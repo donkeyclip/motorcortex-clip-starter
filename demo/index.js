@@ -31,6 +31,9 @@ window.addEventListener("message", (event) => {
     clipContainer.style.height = clip.props.containerParams.height;
     newLiveDef.props.host = clipContainer;
     const newclip = utils.clipFromDefinition(newLiveDef);
+    if(newclip.nonBlockingErrorClip){ // if the initParams validation has failed
+      return alert("Error with init params");
+    }
     window.mc = { Player: new Player({ clip: newclip }) };
   }
 });
