@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
+const dcPath = "https://code.donkeyclip.com";
 module.exports = {
   context: path.resolve(__dirname),
 
@@ -9,6 +10,10 @@ module.exports = {
   resolve: {
     extensions: [".js"],
     modules: [path.resolve("./"), "node_modules"],
+    fallback: {
+      fs: false,
+      path: false,
+    },
   },
   output: {
     filename: "./bundle.js",
@@ -27,19 +32,6 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ["css-loader"],
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "css-loader",
-            options: { sourceMap: true }, // translates CSS into CommonJS
-          },
-          {
-            loader: "sass-loader",
-            options: { sourceMap: true }, // compiles Sass to CSS
-          },
-        ],
       },
     ],
   },
@@ -66,18 +58,12 @@ module.exports = {
     hot: true,
     contentBase: "./demo",
     open: true,
-    openPage: "http://code.donkeyclip.com",
+    openPage: dcPath,
     headers: {
-      "Access-Control-Allow-Origin": "https://code.donkeyclip.com",
+      "Access-Control-Allow-Origin": dcPath,
       "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
       "Access-Control-Allow-Headers":
         "X-Requested-With, content-type, Authorization",
-    },
-  },
-  resolve: {
-    fallback: {
-      fs: false,
-      path: false,
     },
   },
 

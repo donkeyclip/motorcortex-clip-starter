@@ -36,11 +36,21 @@ window.addEventListener("message", (event) => {
     }
     window.mc = { Player: new Player({ clip: newclip }) };
   }
+
+  const newLiveDef = initParamsApply(liveDef, event.data.initParams);
+  document.getElementById("projector").innerHTML = "<div id='clip'></div>";
+  const clipContainer = document.getElementById("clip");
+  // set clip container's dimensions
+  clipContainer.style.width = clip.props.containerParams.width;
+  clipContainer.style.height = clip.props.containerParams.height;
+  newLiveDef.props.host = clipContainer;
+  const newclip = utils.clipFromDefinition(newLiveDef);
+  window.mc = { Player: new Player({ clip: newclip }) };
 });
 
-const clipContainer = document.getElementById("clip");
+const clipElement = document.getElementById("clip");
 // set clip container's dimensions
-clipContainer.style.width = clip.props.containerParams.width;
-clipContainer.style.height = clip.props.containerParams.height;
+clipElement.style.width = clip.props.containerParams.width;
+clipElement.style.height = clip.props.containerParams.height;
 
 window.mc = { Player: new Player({ clip }) };
