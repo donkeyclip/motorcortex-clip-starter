@@ -24,9 +24,11 @@ export const clip = new MotorCortex.HTMLClip({
   initParamsValidationRules: {
     color: {
       type: "color",
-    },
+      optional: true,
+      default: "white"
+    }
   },
   initParams: {
-    color: "white",
+    color: "white"
   },
 });
