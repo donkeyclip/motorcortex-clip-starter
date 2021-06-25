@@ -57,7 +57,7 @@
     "eslint-plugin-standard": "4.1.0",
     "exports-loader": "2.0.0",
     "i": "0.3.6",
-    "imports-loader": "2.0.0",
+    "imports-loader": "3.0.0",
     "npm": "7.19.0",
     "npx": "10.2.2",
     "prettier": "2.3.1",
