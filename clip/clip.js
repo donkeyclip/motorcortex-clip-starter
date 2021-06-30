@@ -25,10 +25,10 @@ export const clip = new MotorCortex.HTMLClip({
     color: {
       type: "color",
       optional: true,
-      default: "white"
-    }
+      default: "white",
+    },
   },
   initParams: {
-    color: "white"
+    color: "white",
   },
 });
