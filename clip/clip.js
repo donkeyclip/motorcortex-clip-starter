@@ -14,11 +14,7 @@ export const clip = new MotorCortex.HTMLClip({
     color: {{ initParams.color }};
     padding: 60px 0;
     text-align: center;
-<<<<<<< HEAD
-    }
-=======
    }
->>>>>>> fe905a8d286a5b3af75fa5fdb281f399c2c6b5ed
   `,
   host: document.getElementById("clip"),
   containerParams: {
