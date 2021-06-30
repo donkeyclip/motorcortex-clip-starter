@@ -1,4 +1,4 @@
-import { clip, initParamsMap } from "../clip/clip";
+import { clip } from "../clip/clip";
 import Player from "@kissmybutton/motorcortex-player";
 import initParamsApply from "./scripts/initParamsApply";
 import { utils } from "@kissmybutton/motorcortex";
@@ -12,7 +12,6 @@ window.top.postMessage(
   {
     what: "clipLoaded",
     clipDims: clip.props.containerParams,
-    initParamsMap,
     clipDef: JSON.parse(JSON.stringify(clipDef)),
     clipId,
   },
@@ -23,7 +22,6 @@ window.addEventListener("message", (event) => {
   if (event.data.what === "initParamsChange") {
     const newLiveDef = initParamsApply(
       liveDef,
-      initParamsMap,
       event.data.initParams
     );
     document.getElementById("projector").innerHTML = "<div id='clip'></div>";
@@ -33,7 +31,11 @@ window.addEventListener("message", (event) => {
     clipContainer.style.height = clip.props.containerParams.height;
     newLiveDef.props.host = clipContainer;
     const newclip = utils.clipFromDefinition(newLiveDef);
-    window.mc = { Player: new Player({ newclip }) };
+    if (newclip.nonBlockingErrorClip) {
+      // if the initParams validation has failed
+      return alert("Error with init params");
+    }
+    window.mc = { Player: new Player({ clip: newclip }) };
   }
 });
 
