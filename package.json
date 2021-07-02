@@ -46,7 +46,7 @@
     "css-loader": "5.2.6",
     "dclip-video-renderer": "1.3.0",
     "es6-promise": "4.2.8",
-    "eslint": "7.29.0",
+    "eslint": "7.30.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "16.0.3",
     "eslint-plugin-babel": "5.3.1",
