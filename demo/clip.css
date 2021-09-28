@@ -1,13 +1,14 @@
+html,
 body {
-    margin: 0;
-    background-color: #282828;
-    position: relative;
+  margin: 0;
+  background-color: #282828;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-#projector {
-    width: 100%;
-}
-
+#projector,
 #clip {
-    margin: auto;
+  width: 100% !important;
+  height: 100% !important;
 }
