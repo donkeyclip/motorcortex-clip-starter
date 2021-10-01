@@ -1,10 +1,8 @@
 import MotorCortex from "@donkeyclip/motorcortex";
 // import clipStyle from "./style.css"; // TODO how to bring this back
-import AnimePluginDefinition from "@donkeyclip/motorcortex-anime";
-const AnimePlugin = MotorCortex.loadPlugin(AnimePluginDefinition);
 
 export const clip = new MotorCortex.HTMLClip({
-  html: `<div class="container a">
+  html: `<div class="container">
         Welcome!
         <br/><br/>
         You've picked <u>{{ initParams.color }}</u>
@@ -34,20 +32,3 @@ export const clip = new MotorCortex.HTMLClip({
     color: "white",
   },
 });
-
-const MyAnime = new AnimePlugin.Anime(
-  {
-    animatedAttrs: {
-      transform: {
-        translateX: "50px",
-        scale: 2,
-      },
-    },
-  },
-  {
-    selector: ".a",
-    duration: 2000,
-    easing: "linear",
-  }
-);
-clip.addIncident(MyAnime, 0);
