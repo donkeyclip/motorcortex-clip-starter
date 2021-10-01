@@ -1,11 +1,11 @@
 {
   "name": "motorcortex-clip-starter",
   "version": "0.0.1",
-  "description": "Starter repo for creating MotorCortex Clips",
+  "description": "Starter repo for creating Donkey Clips",
   "author": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kissmybutton/motorcortex-clip-starter"
+    "url": "https://github.com/donkeyclip/motorcortex-clip-starter"
   },
   "engines": {
     "node": ">=12"
@@ -23,7 +23,8 @@
     "render": "node node_modules/dclip-video-renderer"
   },
   "keywords": [
-    "motorcortex"
+    "motorcortex",
+    "donkeyclip"
   ],
   "config": {
     "commitizen": {
@@ -31,7 +32,9 @@
     }
   },
   "dependencies": {
-    "@kissmybutton/motorcortex": "7.3.0"
+    "@donkeyclip/motorcortex": "7.5.1",
+    "@donkeyclip/motorcortex-anime": "^2.1.16",
+    "base-64": "^1.0.0"
   },
   "devDependencies": {
     "@babel/cli": "7.15.7",
@@ -39,7 +42,7 @@
     "@babel/plugin-syntax-jsx": "7.14.5",
     "@babel/plugin-transform-react-jsx": "7.14.9",
     "@babel/preset-env": "7.15.6",
-    "@kissmybutton/motorcortex-player": "2.2.0",
+    "@donkeyclip/motorcortex-player": "2.2.1",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.2.2",
     "concurrently": "6.2.2",
