@@ -3,20 +3,12 @@ import Player from "@donkeyclip/motorcortex-player";
 import initParamsApply from "./scripts/initParamsApply";
 import { utils } from "@donkeyclip/motorcortex";
 import clipId from "../clip/id";
+import initParams from "../clip/initParams";
 import * as base64 from "base-64";
 const liveDef = clip.exportLiveDefinition();
 liveDef.props.id = clip.id;
 
 const clipDef = clip.exportDefinition();
-window.top.postMessage(
-  {
-    what: "clipLoaded",
-    clipDims: clip.props.containerParams,
-    clipDef: JSON.parse(JSON.stringify(clipDef)),
-    clipId,
-  },
-  "*"
-);
 
 window.addEventListener("message", (event) => {
   if (event.data.what === "initParamsChange") {
@@ -47,6 +39,7 @@ const searchOptions = {};
 for (const i in params) {
   searchOptions[params[i][0]] = params[i][1];
 }
+
 let playerOptions = {};
 if (searchOptions.settings) {
   try {
@@ -55,9 +48,36 @@ if (searchOptions.settings) {
     console.error("Invalid options:", searchOptions.settings);
   }
 }
+
+window.top.postMessage(
+  {
+    what: "clipLoaded",
+    clipDims: clip.props.containerParams,
+    clipDef: JSON.parse(JSON.stringify(clipDef)),
+    clipId,
+    initParams,
+    selectedParamsIndex: searchOptions.initParams,
+  },
+  "*"
+);
+
 window.mc = {
-  Player: new Player({
+  player: new Player({
     clip,
+    pointerEvents: true,
     ...playerOptions,
+    onMillisecondChange: (ms) => {
+      window.top.postMessage(
+        {
+          what: "msChanged",
+          millisecond: ms,
+        },
+        "*"
+      );
+    },
   }),
 };
+
+if (searchOptions.initParams) {
+  window.mc.player.changeInitParams(initParams[searchOptions.initParams].value);
+}
