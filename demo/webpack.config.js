@@ -5,7 +5,7 @@ const dcPath = "https://code.donkeyclip.com";
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./index.js",
+  entry: ["babel-polyfill", "./index.js"],
 
   resolve: {
     extensions: [".js"],
@@ -37,11 +37,11 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.ProvidePlugin({
-      Promise: "es6-promise",
-      fetch:
-        "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
-    }),
+    // new webpack.ProvidePlugin({
+    //   Promise: "es6-promise",
+    //   fetch:
+    //     "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
+    // }),
 
     new webpack.HotModuleReplacementPlugin(),
     // enable HMR globally
