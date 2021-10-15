@@ -1,5 +1,10 @@
-export const addToObject = function (currentObject, path, value, replace = false) {
-  const arrayPath = path.split('.');
+export const addToObject = function (
+  currentObject,
+  path,
+  value,
+  replace = false
+) {
+  const arrayPath = path.split(".");
 
   for (let i = 0; i < arrayPath.length - 1; i++) {
     if (!Object.prototype.hasOwnProperty.call(currentObject, arrayPath[i])) {
@@ -8,7 +13,13 @@ export const addToObject = function (currentObject, path, value, replace = false
     currentObject = currentObject[arrayPath[i]];
   }
 
-  if (Object.prototype.hasOwnProperty.call(currentObject, arrayPath[arrayPath.length - 1]) && replace === false) {
+  if (
+    replace === false &&
+    Object.prototype.hasOwnProperty.call(
+      currentObject,
+      arrayPath[arrayPath.length - 1]
+    )
+  ) {
     return false;
   }
 
@@ -17,7 +28,7 @@ export const addToObject = function (currentObject, path, value, replace = false
 };
 
 export const getFromObject = function (currentObject, path) {
-  const arrayPath = path.split('.');
+  const arrayPath = path.split(".");
   let lastValue;
 
   for (let i = 0; i < arrayPath.length; i++) {
@@ -28,4 +39,4 @@ export const getFromObject = function (currentObject, path) {
     currentObject = currentObject[arrayPath[i]];
   }
   return lastValue;
-}
+};
