@@ -4,6 +4,8 @@
       "@babel/preset-env",
       {
         "targets": "> 0.25%, not dead",
+        "useBuiltIns": "usage",
+        "corejs": "3.18",
       }
     ]
   ],
@@ -13,9 +15,11 @@
   "plugins": [
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-syntax-jsx",
-    ["@babel/plugin-transform-react-jsx",
-    {
-      "pragma": "MotorCortex.utils.createDOMElement"
-    }]
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "MotorCortex.utils.createDOMElement"
+      }
+    ]
   ]
 }

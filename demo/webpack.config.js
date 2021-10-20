@@ -2,56 +2,41 @@ const path = require("path");
 const webpack = require("webpack");
 
 const dcPath = "https://code.donkeyclip.com";
+
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: ["babel-polyfill", "./index.js"],
+  entry: "./index.js",
 
-  resolve: {
-    extensions: [".js"],
-    modules: [path.resolve("./"), "node_modules"],
-    fallback: {
-      fs: false,
-      path: false,
-    },
-  },
   output: {
-    filename: "./bundle.js",
+    path: path.resolve(__dirname, "./"),
     // the output bundle
-
-    path: path.resolve(__dirname, "./" /*"./dist"*/),
+    filename: "./bundle.js",
   },
 
   module: {
     rules: [
       {
-        test: /\.js?$/,
-        use: ["babel-loader"],
-        exclude: /node_modules/,
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.css$/i,
-        use: ["css-loader"],
+        test: /\.js$/,
+        use: "babel-loader",
+        exclude: /node_modules/,
       },
     ],
   },
 
   plugins: [
-    // new webpack.ProvidePlugin({
-    //   Promise: "es6-promise",
-    //   fetch:
-    //     "imports-loader?this=>global!exports-loader?global.fetch!whatwg-fetch",
-    // }),
-
-    new webpack.HotModuleReplacementPlugin(),
     // enable HMR globally
+    new webpack.HotModuleReplacementPlugin(),
 
-    new webpack.NoEmitOnErrorsPlugin(),
     // do not emit compiled assets that include errors
+    new webpack.NoEmitOnErrorsPlugin(),
   ],
 
   devServer: {
-    // watchContentBase: true, // initiate a page refresh if static content changes
     host: "127.0.0.1",
     port: 8090,
     historyApiFallback: false,
@@ -66,7 +51,4 @@ module.exports = {
         "X-Requested-With, content-type, Authorization",
     },
   },
-
-  /* uncomment the following line for debugging */
-  optimization: { minimize: false },
 };
