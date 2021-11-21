@@ -1,9 +1,7 @@
-import MotorCortex from "@donkeyclip/motorcortex";
-import AnimePluginDefinition from "@donkeyclip/motorcortex-anime";
+import {HTMLClip,CSSEffect} from "@donkeyclip/motorcortex";
 import initParams from "./initParams";
-const AnimePlugin = MotorCortex.loadPlugin(AnimePluginDefinition);
 
-export const clip = new MotorCortex.HTMLClip({
+export const clip = new HTMLClip({
   html: `
     <div class="container">
         <p>Welcome!</p>
@@ -36,7 +34,7 @@ export const clip = new MotorCortex.HTMLClip({
   initParams: initParams[1].value,
 });
 
-const MyAnime = new AnimePlugin.Anime(
+const MyIncident = new CSSEffect(
   {
     animatedAttrs: {
       transform: {
@@ -50,4 +48,4 @@ const MyAnime = new AnimePlugin.Anime(
     easing: "linear",
   }
 );
-clip.addIncident(MyAnime, 0);
+clip.addIncident(MyIncident, 0);
