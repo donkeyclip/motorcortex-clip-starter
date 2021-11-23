@@ -29,7 +29,7 @@
     }
   },
   "dependencies": {
-    "@donkeyclip/motorcortex": "7.6.1"
+    "@donkeyclip/motorcortex": "7.6.2"
   },
   "devDependencies": {
     "@babel/core": "7.16.0",
