@@ -2,7 +2,7 @@ import { utils } from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
 import { clip } from "../clip/clip";
 import clipId from "../clip/id";
-import initParams from "../clip/initParams";
+import { initParams } from "../clip/initParams";
 import initParamsApply from "./scripts/initParamsApply";
 
 const liveDef = clip.exportLiveDefinition();

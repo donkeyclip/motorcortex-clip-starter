@@ -1,51 +1,20 @@
-import {HTMLClip,CSSEffect} from "@donkeyclip/motorcortex";
-import initParams from "./initParams";
+import { HTMLClip } from "@donkeyclip/motorcortex";
+import html from "./clip.html";
+import css from "!!raw-loader!./clip.css";
+import { scaleBig, fadeOut } from "./incidents";
+import { initParamsValidationRules, initParams } from "./initParams";
 
 export const clip = new HTMLClip({
-  html: `
-    <div class="container">
-        <p>Welcome!</p>
-        <p>You've picked <u>{{ initParams.color }}</u></p>
-    </div>`,
-  css: `
-  .container {
-    width:100%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
-    color: {{ initParams.color }};
-  }
-  `,
+  html,
+  css,
   host: document.getElementById("clip"),
+  initParamsValidationRules,
+  initParams: initParams[1].value,
   containerParams: {
     width: "800px",
     height: "450px",
   },
-  initParamsValidationRules: {
-    color: {
-      label: "Text Color",
-      type: "color",
-      optional: true,
-      default: "white",
-    },
-  },
-  initParams: initParams[1].value,
 });
 
-const MyIncident = new CSSEffect(
-  {
-    animatedAttrs: {
-      transform: {
-        scale: 2,
-      },
-    },
-  },
-  {
-    selector: ".container",
-    duration: 2000,
-    easing: "linear",
-  }
-);
-clip.addIncident(MyIncident, 0);
+clip.addIncident(scaleBig(".container", 2000), 0);
+clip.addIncident(fadeOut(".container", 1500), 500);
