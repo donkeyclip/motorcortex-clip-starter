@@ -1,0 +1,15 @@
+* {
+    --font-size: {{ initParams.fontSize }};
+    --font-color: {{ initParams.color }};
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  color: var(--font-color);
+  font-size:var(--font-size);
+}
+  

@@ -11,10 +11,10 @@
     "node": ">=12"
   },
   "scripts": {
-    "build": "webpack --mode=production --config ./demo/webpack.config.js",
+    "build": "webpack --mode=production --config ./server/webpack.config.js",
     "lint": "eslint -c .eslintrc src/**/*.js",
     "lint:fix": "npm run lint -- --fix",
-    "start": "npm run build & webpack serve --mode=development --config ./demo/webpack.config.js",
+    "start": "npm run build & webpack serve --mode=development --config ./server/webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
     "test:prod": "npm run lint",
     "render": "node node_modules/dclip-video-renderer"
