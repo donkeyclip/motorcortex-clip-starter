@@ -1,8 +1,8 @@
-# motorcortex-clip-starter
+# Motorcortex-clip-starter
 
 ## Purpose
 
-A starter boilerplate for creating MotorCortex Clips with DCode. Do not use this repo directly. Instead, use it from the **[Donkeyclip CLI](https://github.com/donkeyclip/cli)**
+This repository is a starter boilerplate for creating MotorCortex Clips with DCode. Do not use this repo directly. Instead, use it from the **[Donkeyclip CLI](https://github.com/donkeyclip/cli)**
 
 ## Structure and Contents
 
@@ -12,7 +12,7 @@ It includes:
 - pre-configured eslint and babel
 - a "clip" folder in order for you to use to define your Clip and Incidents. The folder
   contains the `clip.js` file which is just a starting point for your Clip.
-- a "demo" folder which is there just for the needs of viewing, debugging and creating
+- a "demo" folder that is there just for the needs of viewing, debugging and creating
   your Clip through DCode.
 
 ## How to use
