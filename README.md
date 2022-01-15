@@ -1,4 +1,4 @@
-# Motorcortex-clip-starter
+# motorcortex-clip-starter
 
 ## Purpose
 
