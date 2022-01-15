@@ -10,6 +10,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="clip.css" />
+    <script>
+      window.onerror = function (message, source, lineno, colno, error) {
+        window.top.postMessage(
+          {
+            what: "error",
+            message: error,
+          },
+          "*"
+        );
+      };
+    </script>
   </head>
 
   <body>
