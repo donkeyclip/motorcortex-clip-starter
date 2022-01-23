@@ -29,7 +29,7 @@
     }
   },
   "devDependencies": {
-    "@donkeyclip/motorcortex": "7.7.0",
+    "@donkeyclip/motorcortex": "7.8.0",
     "html-loader": "3.1.0",
     "raw-loader": "4.0.2",
     "@babel/core": "7.16.12",
