@@ -31,9 +31,6 @@ module.exports = {
   },
 
   plugins: [
-    // enable HMR globally
-    new webpack.HotModuleReplacementPlugin(),
-
     // do not emit compiled assets that include errors
     new webpack.NoEmitOnErrorsPlugin(),
   ],
