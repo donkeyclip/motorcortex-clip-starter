@@ -61,17 +61,21 @@ window.top.postMessage(
   "*"
 );
 
+let timeout = null;
 player = new Player({
   clip,
   ...playerOptions,
   onMillisecondChange: (ms) => {
-    window.top.postMessage(
-      {
-        what: "msChanged",
-        millisecond: ms,
-      },
-      "*"
-    );
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      window.top.postMessage(
+        {
+          what: "msChanged",
+          millisecond: ms,
+        },
+        "*"
+      );
+    }, 100);
   },
 });
 
