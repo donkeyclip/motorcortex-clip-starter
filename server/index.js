@@ -61,21 +61,25 @@ window.top.postMessage(
   "*"
 );
 
+let timeout = null;
 player = new Player({
   clip,
-  pointerEvents: true,
   ...playerOptions,
   onMillisecondChange: (ms) => {
-    window.top.postMessage(
-      {
-        what: "msChanged",
-        millisecond: ms,
-      },
-      "*"
-    );
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      window.top.postMessage(
+        {
+          what: "msChanged",
+          millisecond: ms,
+        },
+        "*"
+      );
+    }, 100);
   },
 });
 
 if (searchOptions.initParams) {
   player.changeInitParams(initParams[searchOptions.initParams].value);
 }
+

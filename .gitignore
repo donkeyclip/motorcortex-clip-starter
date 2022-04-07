@@ -3,9 +3,6 @@ node_modules
 demo/bundle.js
 demo/bundle.js.LICENSE.txt
 
-#Package JSON Lock
-package-lock.json
-
 # Coverage
 coverage
 

@@ -31,9 +31,6 @@ module.exports = {
   },
 
   plugins: [
-    // enable HMR globally
-    new webpack.HotModuleReplacementPlugin(),
-
     // do not emit compiled assets that include errors
     new webpack.NoEmitOnErrorsPlugin(),
   ],
@@ -44,5 +41,7 @@ module.exports = {
     historyApiFallback: false,
     hot: true,
     static: path.join(__dirname),
+    open: true,
   },
 };
+
