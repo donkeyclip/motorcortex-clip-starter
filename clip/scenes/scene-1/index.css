@@ -1,6 +1,10 @@
 * {
     --font-size: {{ initParams.fontSize }};
     --font-color: {{ initParams.color }};
+    /* 
+      This is an example of how to use MotorCortex's init params in css, using a css variable
+        if you are unfamiliar with css variables here is a quick guide https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties#basic_usage
+    */
 }
 
 .container {
