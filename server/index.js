@@ -11,7 +11,6 @@ liveDef.props.id = clip.id;
 const clipDef = clip.exportDefinition();
 let player;
 window.addEventListener("message", (event) => {
-  debugger;
   if (event.data.what === "initParamsChange") {
     const newLiveDef = initParamsApply(liveDef, event.data.initParams);
     document.getElementById("projector").innerHTML = "<div id='clip'></div>";
@@ -79,7 +78,6 @@ player = new Player({
     }, 100);
   },
 });
-console.log(searchOptions.initParams);
 if (searchOptions.initParams) {
   player.changeInitParams(initParams[searchOptions.initParams].value);
 }

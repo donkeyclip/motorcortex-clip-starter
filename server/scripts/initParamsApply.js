@@ -8,3 +8,4 @@ export default function initParamsApply(liveDefinition, params) {
   liveDefinition.props.initParams = params;
   return liveDefinition;
 }
+
