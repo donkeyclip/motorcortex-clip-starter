@@ -1,23 +1,23 @@
-export const initParamsValidationRules = {
-  color: {
-    label: "Text Color",
-    type: "color",
-    optional: true,
-    default: "white",
-  },
-};
-
-export const initParams = [
+export default [
   {
-    name: "Default",
+    name: "Blue medium",
     value: {
-      color: "white",
+      color: "blue",
+      fontSize: "30px",
     },
   },
   {
-    name: "Red Color",
+    name: "Red big",
     value: {
       color: "red",
+      fontSize: "60px",
+    },
+  },
+  {
+    name: "Green small",
+    value: {
+      color: "red",
+      fontSize: "10px",
     },
   },
 ];

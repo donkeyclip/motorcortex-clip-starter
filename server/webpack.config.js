@@ -41,5 +41,7 @@ module.exports = {
     historyApiFallback: false,
     hot: true,
     static: path.join(__dirname),
+    open: "https://code.donkeyclip.com",
   },
 };
+
