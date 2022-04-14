@@ -1,7 +1,8 @@
 # Node modules
 node_modules
-demo/bundle.js
-demo/bundle.js.LICENSE.txt
+server/bundle.js
+server/bundle.js.LICENSE.txt
+
 
 # Coverage
 coverage
