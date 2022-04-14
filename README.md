@@ -12,7 +12,7 @@ It includes:
 - pre-configured eslint and babel
 - a "clip" folder in order for you to use to define your Clip and Incidents. The folder
   contains the `clip.js` file which is just a starting point for your Clip.
-- a "demo" folder that is there just for the needs of viewing, debugging and creating
+- a "server" folder that is there just for the needs of viewing, debugging and creating
   your Clip through DCode.
 
 ## How to use
