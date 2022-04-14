@@ -17,7 +17,7 @@
     "start": "npm run build & webpack serve --mode=development --config ./server/webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
     "test:prod": "npm run lint",
-    "render": "node node_modules/dclip-video-renderer"
+    "render": "node node_modules/@donkeyclip/video-renderer"
   },
   "keywords": [
     "motorcortex",
