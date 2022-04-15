@@ -13,11 +13,12 @@ const clip = new HTMLClip({
     height: "450px",
   },
   initParams: {
-    fontSize: "@expression(initParams.fontSize)",
-    color: "@expression(initParams.color)",
+    fontSize: "@initParams.fontSize",
+    color: "@initParams.color",
   },
 });
 
 clip.addIncident(fadeOut(".container", 2000), 0);
 clip.addIncident(scaleBig(".container", 2000), 0);
 export default clip;
+
