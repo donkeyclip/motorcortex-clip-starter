@@ -23,7 +23,6 @@ Once you've created your new Clip you have the ability to publish it through the
 
 - `npm run build`: builds the demo
 - `npm start`: builds and starts the demo
-- `npm render`: render the demo to mp4 video see [@donkeyclip/video-renderer](https://github.com/donkeyclip/video-renderer) for more
 
 ## Have fun!!!
 
