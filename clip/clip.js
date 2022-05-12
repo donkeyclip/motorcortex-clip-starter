@@ -1,6 +1,6 @@
 import { HTMLClip } from "@donkeyclip/motorcortex";
 import html from "./clip.html";
-import css from "!!raw-loader!./clip.css";
+import css from "./clip.css";
 import initParams from "./initParams";
 import scene1 from "./scenes/scene-1";
 import initParamsValidationRules from "./initParamsValidationRules";
