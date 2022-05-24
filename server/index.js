@@ -79,12 +79,7 @@ player = new Player({
   },
 });
 
-const checkBlockWaitings = () => {
-  if (Object.keys(clip.blockingWaitings).length) {
-    return true;
-  }
-  return false;
-};
+const checkBlockWaitings = () => Object.keys(clip.blockingWaitings).length;
 
 if (searchOptions.initParams) {
   const interval = setInterval(() => {
