@@ -78,7 +78,15 @@ player = new Player({
     }, 100);
   },
 });
+
+const checkBlockWaitings = () => Object.keys(clip.blockingWaitings).length;
+
 if (searchOptions.initParams) {
-  player.changeInitParams(initParams[searchOptions.initParams].value);
+  const interval = setInterval(() => {
+    if (!checkBlockWaitings()) {
+      clearInterval(interval);
+      player.changeInitParams(initParams[searchOptions.initParams].value);
+    }
+  }, 100);
 }
 
