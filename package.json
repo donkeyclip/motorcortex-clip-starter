@@ -37,7 +37,7 @@
     "babel-loader": "8.2.5",
     "core-js": "3.23.1",
     "css-minimizer-webpack-plugin": "4.0.0",
-    "cssnano": "5.1.11",
+    "cssnano": "5.1.12",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-babel": "5.3.1",
