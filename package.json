@@ -27,7 +27,7 @@
     "@babel/core": "7.20.5",
     "@babel/eslint-parser": "7.19.1",
     "@babel/preset-env": "7.20.2",
-    "@donkeyclip/motorcortex": "9.4.1",
+    "@donkeyclip/motorcortex": "9.5.0",
     "@donkeyclip/motorcortex-player": "2.10.7",
     "@rollup/plugin-babel": "6.0.3",
     "@rollup/plugin-commonjs": "23.0.4",
