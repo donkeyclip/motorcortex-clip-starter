@@ -46,7 +46,7 @@
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-promise": "6.1.1",
     "html-loader": "4.2.0",
-    "postcss": "8.4.19",
+    "postcss": "8.4.20",
     "postcss-loader": "7.0.2",
     "prettier": "2.8.1",
     "rimraf": "3.0.2",
