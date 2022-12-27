@@ -5,7 +5,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./index.js",
+  entry: "./index.ts",
 
   output: {
     path: path.resolve(__dirname, "./"),
@@ -42,7 +42,7 @@ module.exports = {
         },
       },
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
