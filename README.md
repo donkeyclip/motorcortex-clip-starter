@@ -24,7 +24,7 @@ Once you've created your new Clip you have the ability to publish it through the
 - `npm run build`: builds the demo
 - `npm start`: builds and starts the demo
 
-## Have fun!!!
+## Have fun!
 
 ## License
 
