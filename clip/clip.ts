@@ -1,12 +1,12 @@
-import { CSSEffect, HTMLClip } from "@donkeyclip/motorcortex";
-import html from "../clip/
+import { HTMLClip } from "@donkeyclip/motorcortex";
 import css from "./clip.css";
+import html from "./clip.html";
+import { fadeOut } from "./effects/fadeOut";
+import { scaleBig } from "./effects/scaleBig";
 import initParams from "./initParams";
 import initParamsValidationRules from "./initParamsValidationRules";
-import { fadeOut } from "./effects/fadeOut"
-import { scaleBig } from "./effects/scaleBig";
 
-export const clip = new HTMLClip({
+const clip = new HTMLClip({
   html,
   css,
   host: document.getElementById("clip"),
@@ -18,5 +18,7 @@ export const clip = new HTMLClip({
   },
 });
 
-//clip.addIncident(fadeOut, 0);
-clip.addIncident(scaleBig(".container", 8000) as any, 0);
+clip.addIncident(fadeOut, 0);
+clip.addIncident(scaleBig(".container", 8000), 0);
+
+export { clip };

@@ -1,43 +1,50 @@
-import { utils } from "@donkeyclip/motorcortex";
+import { Definition, utils } from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
 import { clip } from "../clip/clip";
-import clipId from "./id";
 import initParams from "../clip/initParams";
+import clipId from "./id";
 import initParamsApply from "./scripts/initParamsApply";
 
-
-
 const liveDef = clip.exportLiveDefinition();
-if (liveDef.props!= null && liveDef != undefined)
-liveDef.props.id = clip.id;
+if (liveDef.props != null && liveDef != undefined) liveDef.props.id = clip.id;
 
 const clipDef = clip.exportDefinition();
 let player;
 window.addEventListener("message", (event) => {
   if (event.data.what === "initParamsChange") {
-    const newLiveDef = initParamsApply(liveDef, event.data.initParams);
-    document.getElementById("projector")!.innerHTML = "<div id='clip'></div>";
+    const newLiveDef = initParamsApply(
+      liveDef,
+      event.data.initParams as Definition["props"]["initParams"]
+    );
+    const projector = document.getElementById("projector");
+    if (!projector) {
+      console.error("Failed to get projector element!");
+      return;
+    }
+    projector.innerHTML = "<div id='clip'></div>";
     const newClipContainer = document.getElementById("clip");
     // set clip container's dimensions
-    if(newClipContainer!=null){
+    if (newClipContainer != null) {
       newClipContainer.style.width = clip.props.containerProps?.width;
       newClipContainer.style.height = clip.props.containerProps?.height;
     }
     newLiveDef.props.host = newClipContainer;
-    const newclip = utils.clipFromDefinition(newLiveDef);
-    if (newclip.nonBlockingErrorClip) {
+    const newclip = utils.clipFromDefinition(newLiveDef as any) as any;
+
+    if (newclip.results === false || newclip.nonBlockingErrorClip) {
       // if the initParams validation has failed
       return alert("Error with init params");
     }
-    player = new Player({ clip: newclip });
   }
 });
 
 const clipContainer = document.getElementById("clip");
 // set clip container's dimensions
-if (clipContainer!= null){
+if (clipContainer != null) {
   clipContainer.style.width = clip.props.containerProps?.width;
   clipContainer.style.height = clip.props.containerProps?.height;
+} else {
+  console.error("Failed to get clip container");
 }
 
 const searchQuery = window.location.search.split("?")[1] || "";
@@ -74,7 +81,7 @@ window.top?.postMessage(
   "*"
 );
 
-let timeout: ReturnType<typeof setTimeout> = setTimeout(function(){},0);
+let timeout: ReturnType<typeof setTimeout> = setTimeout(function () {}, 0);
 player = new Player({
   clip,
   ...playerOptions,
@@ -98,8 +105,7 @@ if (searchOptions.initParams) {
   const interval = setInterval(() => {
     if (!checkBlockWaitings()) {
       clearInterval(interval);
-      player.changeInitParams(initParams[searchOptions.initParams!].value);
+      player.changeInitParams(initParams[searchOptions.initParams].value);
     }
   }, 100);
 }
-

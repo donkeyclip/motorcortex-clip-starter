@@ -1,10 +1,14 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist",
-        "allowJs": true,
-        "target": "es5"
-    },
-        "include": [
-            "./clip/*"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./",
+    "allowJs": true,
+    "target": "es5",
+    "module": "ES6",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  },
+
+  "include": ["./clip", "./types.d.ts", "./server"]
 }

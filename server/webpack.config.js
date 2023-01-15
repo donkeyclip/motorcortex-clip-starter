@@ -12,7 +12,9 @@ module.exports = {
     // the output bundle
     filename: "./bundle.js",
   },
-
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"],
+  },
   module: {
     rules: [
       {
@@ -42,7 +44,7 @@ module.exports = {
         },
       },
       {
-        test: /\.ts$/,
+        test: /\.(ts|js)x?$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
