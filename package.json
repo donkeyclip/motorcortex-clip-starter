@@ -11,7 +11,9 @@
     "node": ">=12"
   },
   "scripts": {
-    "tsc": "tsc",
+    "use:js": "npm run clean && tsc && npm run copy-files && npm run clean",
+    "clean": "rimraf ./dist",
+    "copy-files": "copyfiles -u 1 {clip,server}/**/*.html {clip,server}/**/*.css dist/",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
     "lint": "eslint -c .eslintrc src/**/*.js",
     "lint:fix": "npm run lint -- --fix",
