@@ -103,7 +103,6 @@ const player = new Player({
 const checkBlockWaitings = () => Object.keys(clip.blockingWaitings).length;
 
 if (searchOptions.initParams) {
-  debugger; // eslint-disable-line
   const interval = setInterval(() => {
     if (!checkBlockWaitings()) {
       clearInterval(interval);
