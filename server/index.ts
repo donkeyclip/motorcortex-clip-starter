@@ -4,7 +4,6 @@ import { clip } from "../clip/clip";
 import initParams from "../clip/initParams";
 import clipId from "./id";
 import initParamsApply from "./scripts/initParamsApply";
-
 const liveDef = clip.exportLiveDefinition();
 if (liveDef.props != null && liveDef != undefined) liveDef.props.id = clip.id;
 
@@ -29,9 +28,11 @@ window.addEventListener("message", (event) => {
       newClipContainer.style.height = clip.props.containerProps?.height;
     }
     newLiveDef.props.host = newClipContainer;
-    const newclip = utils.clipFromDefinition(newLiveDef);
-
-    if (newclip.result === false || newclip.nonBlockingErrorClip) {
+    const newClip = utils.clipFromDefinition(newLiveDef);
+    if (
+      ("result" in newClip && newClip.result === false) ||
+      ("nonBlockingErrorClip" in newClip && newClip.nonBlockingErrorClip)
+    ) {
       // if the initParams validation has failed
       return alert("Error with init params");
     }

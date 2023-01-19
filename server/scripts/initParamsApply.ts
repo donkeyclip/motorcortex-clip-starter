@@ -11,5 +11,5 @@ export default function initParamsApply(
   params: Definition["props"]["initParams"]
 ) {
   liveDefinition.props.initParams = params;
-  return liveDefinition as Definition;
+  return liveDefinition;
 }
