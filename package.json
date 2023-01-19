@@ -11,7 +11,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "use:js": "npm run clean && tsc && npm run mv:js && rimraf */.ts && npm run lint:fix",
+    "use:js": "npm run clean && tsc && npm run mv:js && rimraf ./**/*.ts && npm run lint:fix",
     "clean": "rimraf ./dist",
     "mv:js": "copyfiles -u 1 dist/clip/* ./ && copyfiles -u 1 dist/server/* ./ && npm run clean ",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
