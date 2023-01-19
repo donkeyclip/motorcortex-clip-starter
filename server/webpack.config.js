@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./index.ts",
+  entry: "./index",
 
   output: {
     path: path.resolve(__dirname, "./"),
