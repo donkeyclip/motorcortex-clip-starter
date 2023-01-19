@@ -13,7 +13,7 @@
   "scripts": {
     "tsc": "tsc",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
-    "lint": "eslint -c .eslintrc src/**/*.js",
+    "lint": "eslint -c .eslintrc --no-error-on-unmatched-pattern ./**/*{.ts,.js}",
     "lint:fix": "npm run lint -- --fix",
     "start": "npm run build & webpack serve --mode=development --config ./server/webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
