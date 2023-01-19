@@ -5,7 +5,7 @@ import initParams from "../clip/initParams";
 import clipId from "./id";
 import initParamsApply from "./scripts/initParamsApply";
 const liveDef = clip.exportLiveDefinition();
-if (liveDef.props != null && liveDef != undefined) liveDef.props.id = clip.id;
+if (liveDef.props != null) liveDef.props.id = clip.id;
 
 const clipDef = clip.exportDefinition();
 
