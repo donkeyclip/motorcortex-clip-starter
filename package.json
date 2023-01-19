@@ -11,6 +11,7 @@
     "node": ">=12"
   },
   "scripts": {
+    "tsc": "tsc",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
     "lint": "eslint -c .eslintrc src/**/*.js",
     "lint:fix": "npm run lint -- --fix",

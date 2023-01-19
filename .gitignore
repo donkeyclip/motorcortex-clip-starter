@@ -5,6 +5,7 @@ bundle.js
 bundle.js.LICENSE.txt
 server/bundle.js
 server/bundle.js.LICENSE.txt
+dist
 
 # Coverage
 coverage
