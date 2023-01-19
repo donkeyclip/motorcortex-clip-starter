@@ -13,7 +13,7 @@
   "scripts": {
     "use:js": "npm run clean && tsc && npm run copy-files && npm run mv-dist",
     "clean": "rimraf ./dist",
-    "mv-dist": "copyfiles -u 1 dist/clip/* clip && copyfiles -u 1 dist/clip/* clip && npm run clean ",
+    "mv-dist": "copyfiles -u 1 dist/clip/* ./ && copyfiles -u 1 dist/server/* server && npm run clean ",
     "copy-files": "copyfiles -u 1 clip/**/*.html clip/**/*.css dist/clip && copyfiles -u 1 server/**/*.html server/**/*.css dist/server",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
     "lint": "eslint -c .eslintrc src/**/*.js",
