@@ -11,12 +11,12 @@
     "node": ">=12"
   },
   "scripts": {
-    "use:js": "npm run clean && tsc && npm run copy-files && npm run mv-dist",
+    "use:js": "npm run clean && tsc && npm run copy-files && rimraf ./clip && rimraf ./server && npm run mv-dist && npm run lint:fix",
     "clean": "rimraf ./dist",
-    "mv-dist": "copyfiles -u 1 dist/clip/* ./ && copyfiles -u 1 dist/server/* server && npm run clean ",
+    "mv-dist": "copyfiles -u 1 dist/clip/* ./ && copyfiles -u 1 dist/server/* ./ && npm run clean ",
     "copy-files": "copyfiles -u 1 clip/**/*.html clip/**/*.css dist/clip && copyfiles -u 1 server/**/*.html server/**/*.css dist/server",
     "build": "webpack --mode=production --config ./server/webpack.config.js",
-    "lint": "eslint -c .eslintrc src/**/*.js",
+    "lint": "eslint -c .eslintrc ./**/*.js",
     "lint:fix": "npm run lint -- --fix",
     "start": "npm run build & webpack serve --mode=development --config ./server/webpack.config.js",
     "test": "HERE GOES YOUR TEST TASK",
