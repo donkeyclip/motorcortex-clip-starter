@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require("path");
 const webpack = require("webpack");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -5,14 +6,16 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   context: path.resolve(__dirname),
 
-  entry: "./index.js",
+  entry: "./index.ts",
 
   output: {
     path: path.resolve(__dirname, "./"),
     // the output bundle
     filename: "./bundle.js",
   },
-
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"],
+  },
   module: {
     rules: [
       {
@@ -42,7 +45,7 @@ module.exports = {
         },
       },
       {
-        test: /\.js$/,
+        test: /\.(ts|js)x?$/,
         use: "babel-loader",
         exclude: /node_modules/,
       },
