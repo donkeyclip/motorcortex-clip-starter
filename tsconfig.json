@@ -7,7 +7,8 @@
     "module": "ES6",
     "moduleResolution": "node",
     "noEmit": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "baseUrl": "."
   },
 
   "include": ["./clip", "./types.d.ts", "./server"]

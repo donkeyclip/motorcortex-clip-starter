@@ -19,6 +19,6 @@ const clip = new HTMLClip({
 });
 
 clip.addIncident(fadeOut, 0);
-clip.addIncident(scaleBig(".container", 8000), 0);
+clip.addIncident(scaleBig(".container", 2000), 0);
 
 export { clip };

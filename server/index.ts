@@ -9,7 +9,7 @@ const liveDef = clip.exportLiveDefinition();
 if (liveDef.props != null && liveDef != undefined) liveDef.props.id = clip.id;
 
 const clipDef = clip.exportDefinition();
-let player;
+
 window.addEventListener("message", (event) => {
   if (event.data.what === "initParamsChange") {
     const newLiveDef = initParamsApply(
@@ -29,9 +29,9 @@ window.addEventListener("message", (event) => {
       newClipContainer.style.height = clip.props.containerProps?.height;
     }
     newLiveDef.props.host = newClipContainer;
-    const newclip = utils.clipFromDefinition(newLiveDef as any) as any;
+    const newclip = utils.clipFromDefinition(newLiveDef);
 
-    if (newclip.results === false || newclip.nonBlockingErrorClip) {
+    if (newclip.result === false || newclip.nonBlockingErrorClip) {
       // if the initParams validation has failed
       return alert("Error with init params");
     }
@@ -51,7 +51,7 @@ const searchQuery = window.location.search.split("?")[1] || "";
 const params = searchQuery.split("&").map((pair) => pair.split("="));
 
 type SearchOptions = {
-  initParams?: any;
+  initParams?: string;
   settings?: string;
 };
 
@@ -81,8 +81,8 @@ window.top?.postMessage(
   "*"
 );
 
-let timeout: ReturnType<typeof setTimeout> = setTimeout(function () {}, 0);
-player = new Player({
+let timeout: ReturnType<typeof setTimeout> = null;
+const player = new Player({
   clip,
   ...playerOptions,
   onMillisecondChange: (ms) => {
