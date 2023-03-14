@@ -16,7 +16,7 @@ export default [
   {
     name: "Green small",
     value: {
-      color: "red",
+      color: "green",
       fontSize: "10px",
     },
   },
